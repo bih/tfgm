@@ -1,5 +1,8 @@
 source 'http://rubygems.org'
 
+# Rake
+gem 'rake'
+
 # Jason
 gem 'json'
 
