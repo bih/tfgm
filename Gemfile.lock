@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
+    curb (0.8.3)
+    json (1.7.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  active_support
+  curb
+  json
