@@ -1,5 +1,7 @@
 ![](http://i.imgur.com/6PGUo4g.png)
-# TFGM Unofficial Rubygem
+
+[![Dependency Status](https://gemnasium.com/bih/tfgm.png)](https://gemnasium.com/bih/tfgm) [![Build Status](https://travis-ci.org/bih/tfgm.png?branch=master)](https://travis-ci.org/bih/tfgm)
+# Transport for Greater Manchester: Unofficial Rubygem
 This is a Rubygem which acts as a wrapper for the [Transport for Greater Manchester REST API](http://developer.tfgm.com). This provides the most accurate car parks, bus and metrolink information available to freely consume through the **opendata.tfgm.com** REST API.
 
 We built this to use internally in our project, EventBrite, for the [Innovation Challenge in Manchester](http://futureeverything.org/summit/conference/workshops-fringe-events/innovation-challenge/) (which won Best Under 21). The TFGM REST API is **new and unstable** as of March 2013 so we would avoid using it in production.
