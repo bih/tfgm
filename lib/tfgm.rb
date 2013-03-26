@@ -28,7 +28,7 @@ module TFGM
     TFGM_BASE_URL = "http://opendata.tfgm.com"
 
     ## The version
-    TFGM_VERSION = "0.0.1"
+    TFGM_VERSION = "0.0.3"
     
     ##
     ## When we call TFGM::API.new, we automatically call initialize. Interesting.
@@ -71,10 +71,8 @@ module TFGM
 
         ## Right, throw an error if we can't authorize.
         throw TFGM_Error::DeveloperOrApplicationKeyNotAccepted if _result['Message'].eql?("Authorization has been denied for this request.")
-      rescue TypeError
+      rescue TypeError, JSON::ParserError
         ## Empty by design.
-      rescue JSON::ParserError
-        throw TFGM_Error::JSONParserError
       end
 
       _result
@@ -83,11 +81,11 @@ module TFGM
     ##
     ## Show all car parks
     ##
-    def carparks(page = 1, per_page = 10, options = {})
+    def carparks(page = 0, per_page = 10, options = {})
       _options = { :pageIndex => page, :pageSize => per_page }
 
       ## This validates whether a car park state is valid.
-      if options.has_key?('state')
+      if options.has_key?('state') then
         _enums = self._call('/api/enums')
         throw TFGM_Error::CarParkStateTypeInvalid unless _enums.member?(options['state'])
       end
@@ -120,6 +118,10 @@ module TFGM
       self._call("/api/routes/#{bus_code.to_s}", options)
     end
 
+    def is_route(bus_code, options = {})
+      self.route(bus_code, options).count > 0
+    end
+
     def buses_on_route(bus_code, options = {})
       self._call("/api/routes/#{bus_code.to_s}/buses", options)
     end
@@ -144,12 +146,12 @@ module TFGM
     ##
     ## Journey times
     ##
-    def journey_times(options = {})
-      self._call("/api/journeytimes", options)
-    end
-
-    def journey_time(journey_id, options = {})
-      self._call("/api/journeytimes/#{journey_id.to_s}", options)
+    def journey_times(journey_id = 0, options = {})
+      if journey_id > 0 then
+        self._call("/api/journeytimes/#{journey_id.to_s}", options)
+      else 
+        self._call("/api/journeytimes", options)
+      end
     end
 
     ##

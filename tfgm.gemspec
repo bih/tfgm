@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'tfgm'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2013-03-26'
   s.summary     = 'A simple Ruby wrapper for the TFGM REST API.'
   s.description = <<-EOF
