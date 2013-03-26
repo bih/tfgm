@@ -15,4 +15,5 @@ env:
  - STATE=STAGING
 
 script: 
- - ruby tests/travis.rb
+ - cd tests
+ - ruby travis.rb

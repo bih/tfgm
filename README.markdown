@@ -1,6 +1,6 @@
 ![](http://i.imgur.com/6PGUo4g.png)
 
-[![Dependency Status](https://gemnasium.com/bih/tfgm.png)](https://gemnasium.com/bih/tfgm) [![Build Status](https://travis-ci.org/bih/tfgm.png?branch=master)](https://travis-ci.org/bih/tfgm)
+[![Build Status](https://travis-ci.org/bih/tfgm.png?branch=master)](https://travis-ci.org/bih/tfgm) [![Build Status](https://d25lcipzij17d.cloudfront.net/badge.png?title=gem&type=3c&v=0.0.3)]() [![Dependency Status](https://gemnasium.com/bih/tfgm.png)](https://gemnasium.com/bih/tfgm) [![Code Climate](https://codeclimate.com/github/bih/tfgm.png)](https://codeclimate.com/github/bih/tfgm)
 # Transport for Greater Manchester: Unofficial Rubygem
 This is a Rubygem which acts as a wrapper for the [Transport for Greater Manchester REST API](http://developer.tfgm.com). This provides the most accurate car parks, bus and metrolink information available to freely consume through the **opendata.tfgm.com** REST API.
 
