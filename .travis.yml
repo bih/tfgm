@@ -8,4 +8,11 @@ rvm:
  - "1.9.2"
  - "1.9.3"
 
- script: "ruby tests/travis.rb"
+gemfile:
+ - Gemfile
+
+env:
+ - STATE=STAGING
+
+script: 
+ - ruby tests/travis.rb
