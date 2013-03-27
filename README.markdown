@@ -4,7 +4,7 @@
 # Transport for Greater Manchester: Unofficial Rubygem
 This is a Rubygem which acts as a wrapper for the [Transport for Greater Manchester REST API](http://developer.tfgm.com). This provides the most accurate car parks, bus and metrolink information available to freely consume through the **opendata.tfgm.com** REST API.
 
-We built this to use internally in our project, EventBrite, for the [Innovation Challenge in Manchester](http://futureeverything.org/summit/conference/workshops-fringe-events/innovation-challenge/) (which won Best Under 21). The TFGM REST API is **new and unstable** as of March 2013 so we would avoid using it in production.
+We built this to use internally in our project, EventRoute, for the [Innovation Challenge in Manchester](http://futureeverything.org/summit/conference/workshops-fringe-events/innovation-challenge/) (which won Best Under 21). The TFGM REST API is **new and unstable** as of March 2013 so we would avoid using it in production.
 
 ## Getting Started
 * **Sign up for an API Key** &mdash; It's easy to sign up at [developer.tfgm.com](http://developer.tfgm.com) and you'll need a developer & application key. An example of what both the keys should like are: `a1b23cd4-ef67-890g-h123-4567i8jk9lmn` and they must be 36 characters in length.
