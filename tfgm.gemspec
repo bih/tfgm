@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'tfgm'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2013-03-26'
   s.summary     = 'A simple Ruby wrapper for the TFGM REST API.'
   s.description = <<-EOF
@@ -25,5 +25,5 @@ If you'd like to contribute to the development of the gem, visit http://github.c
   ## Requirements
   s.add_runtime_dependency 'curb'
   s.add_runtime_dependency 'json'
-  s.add_runtime_dependency 'active_support'
+  s.add_runtime_dependency 'active_support', '>= 3.2.13'
 end
